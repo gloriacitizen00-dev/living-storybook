@@ -1,144 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Living Storybook</title>
+<meta charset="UTF-8">
+<title>Living Storybook</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #f4f1ec;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+<style>
+  body {
+    margin: 0;
+    background: #3b2f24;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Georgia, serif;
+  }
 
-    #book {
-      width: 420px;
-      height: 560px;
-      background: #ffffff;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      padding: 24px;
-      border-radius: 6px;
-    }
+  /* Book container */
+  .book {
+    width: 800px;
+    height: 520px;
+    background: linear-gradient(135deg, #6b4f2a, #4b3621);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  }
 
-    #page {
-      height: 100%;
-      opacity: 0;
-      transform: translateX(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
+  /* Open book */
+  .spread {
+    display: flex;
+    height: 100%;
+    background: #f8f4ec;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+  }
 
-    #page.turn {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  .page {
+    width: 50%;
+    padding: 24px;
+    position: relative;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
 
-    .image-placeholder {
-      height: 60%;
-      background: #e0e0e0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      margin-bottom: 16px;
-      border-radius: 4px;
-      font-style: italic;
-    }
+  .page.left {
+    border-right: 1px solid #d6cfc2;
+  }
 
-    #text {
-      font-size: 18px;
-      line-height: 1.5;
-    }
+  .page.right {
+    border-left: 1px solid #e5dfd3;
+  }
 
-    .controls {
-      margin-top: 16px;
-    }
+  .page.turn {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
 
-    button {
-      padding: 8px 16px;
-      margin: 0 6px;
-      cursor: pointer;
-      border: none;
-      border-radius: 4px;
-      background: #333;
-      color: white;
-      font-size: 14px;
-    }
+  .image-placeholder {
+    height: 55%;
+    background: #ddd2c4;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b5a45;
+    font-style: italic;
+  }
 
-    button:hover {
-      background: #555;
-    }
-  </style>
+  .text {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #2e2a25;
+  }
+
+  .controls {
+    margin-top: 18px;
+  }
+
+  button {
+    padding: 10px 18px;
+    margin: 0 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #6b4f2a;
+    color: #fff;
+  }
+
+  button:hover {
+    background: #8b6a3e;
+  }
+</style>
 </head>
 
 <body>
 
-  <div id="book">
-    <div id="page">
-      <div class="image-placeholder">
-        Illustration will go here
-      </div>
-      <p id="text"></p>
+<div class="book">
+  <div class="spread" id="spread">
+    <div class="page left">
+      <div class="image-placeholder">Illustration</div>
+      <div class="text" id="leftText"></div>
+    </div>
+    <div class="page right">
+      <div class="image-placeholder">Illustration</div>
+      <div class="text" id="rightText"></div>
     </div>
   </div>
+</div>
 
-  <div class="controls">
-    <button id="prev">← Previous</button>
-    <button id="next">Next →</button>
-  </div>
+<div class="controls">
+  <button id="prev">← Previous</button>
+  <button id="next">Next →</button>
+</div>
 
-  <script>
-    // STORY DATA (edit freely)
-    const pages = [
-      {
-        text: "This is the beginning of a living story."
-      },
-      {
-        text: "Every page turns softly, like a real book."
-      },
-      {
-        text: "Soon, illustrations will bring magic to life."
-      },
-      {
-        text: "This project blends art, storytelling, and technology."
-      }
-    ];
+<script>
+  const pages = [
+    "This is the beginning of a living story.",
+    "The book opens slowly, like a secret.",
+    "Each page breathes and listens.",
+    "Wood remembers every story told.",
+    "Magic lives between the pages.",
+    "And the story keeps growing."
+  ];
 
-    let currentPage = 0;
+  let index = 0;
 
-    const textElement = document.getElementById("text");
-    const pageElement = document.getElementById("page");
+  const leftText = document.getElementById("leftText");
+  const rightText = document.getElementById("rightText");
+  const spread = document.getElementById("spread");
 
-    function renderPage() {
-      pageElement.classList.remove("turn");
+  function renderPages() {
+    const leftPage = spread.children[0];
+    const rightPage = spread.children[1];
 
-      setTimeout(() => {
-        textElement.textContent = pages[currentPage].text;
-        pageElement.classList.add("turn");
-      }, 50);
+    leftPage.classList.add("turn");
+    rightPage.classList.add("turn");
+
+    setTimeout(() => {
+      leftText.textContent = pages[index] || "";
+      rightText.textContent = pages[index + 1] || "";
+      leftPage.classList.remove("turn");
+      rightPage.classList.remove("turn");
+    }, 300);
+  }
+
+  document.getElementById("next").addEventListener("click", () => {
+    if (index < pages.length - 2) {
+      index += 2;
+      renderPages();
     }
+  });
 
-    document.getElementById("next").addEventListener("click", () => {
-      if (currentPage < pages.length - 1) {
-        currentPage++;
-        renderPage();
-      }
-    });
+  document.getElementById("prev").addEventListener("click", () => {
+    if (index > 0) {
+      index -= 2;
+      renderPages();
+    }
+  });
 
-    document.getElementById("prev").addEventListener("click", () => {
-      if (currentPage > 0) {
-        currentPage--;
-        renderPage();
-      }
-    });
-
-    // Initial load
-    renderPage();
-  </script>
+  renderPages();
+</script>
 
 </body>
 </html>
