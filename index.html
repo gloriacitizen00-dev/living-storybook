@@ -45,6 +45,7 @@
     background: linear-gradient(90deg, #fdfbf6, #f4efe6);
     position: relative;
     transform-origin: left center;
+    transform-style: preserve-3d;
   }
 
   .page.left {
@@ -54,7 +55,6 @@
   .page.right {
     transform-origin: right center;
     border-left: 1px solid #e5ddd0;
-   transform-style: preserve-3d;
   }
 
   /* ===== PAGE FLIP EFFECT ===== */
@@ -65,7 +65,7 @@
   .page.flip-left {
     animation: flipLeft 0.9s ease forwards;
   }
-
+    
   @keyframes flipRight {
     0% {
       transform: rotateY(0deg);
@@ -74,12 +74,13 @@
     
     50% {
   transform: translateZ(60px) rotateY(-120deg); 
-  box-shadow: -30px 0 40px rgba(0,0,0,0.4)
-    
+  box-shadow -30px 0 40px rgba(0,0,0,0.4);
+    }
     100% {
       transform: rotateY(0deg);
     }
   }
+  
 
   @keyframes flipLeft {
     0% {
