@@ -20,7 +20,7 @@
 
   /* ===== SIDEBAR (CHAPTERS) ===== */
   .sidebar {
-    width: 240px; /* ~15cm */
+    width: 570px; /* ~15cm */
     background: #3a2c1f;
     color: #f5efe6;
     padding: 24px;
@@ -78,16 +78,13 @@
   /* ===== CONTENT ===== */
   .content {
     display: flex;
-    flex-direction: column;
     flex: 1;
     gap: 24px;
   }
 
   .image-box {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    height: 100%;
-    width: 100%;
+    width: 45%;
+    background: #e2dacb;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -97,7 +94,6 @@
   }
 
   .text-box {
-    height: 45%;
     width: 55%;
     background: #fffdf8;
     padding: 20px;
@@ -113,7 +109,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: calc(100% - 240px);
+    width: calc(100% - 570px);
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
@@ -146,7 +142,6 @@
     <h2>Chapters</h2>
     <div id="chapterList"></div>
   </div>
-
 
   <!-- PAGE -->
   <div class="page-area">
