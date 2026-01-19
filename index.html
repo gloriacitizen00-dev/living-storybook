@@ -52,9 +52,9 @@
   }
 
   .page.right {
-    border-left: 1px solid #e5ddd0;
     transform-origin: right center;
-    transform-style: preserve-3d;
+    border-left: 1px solid #e5ddd0;
+   transform-style: preserve-3d;
   }
 
   /* ===== PAGE FLIP EFFECT ===== */
@@ -73,7 +73,7 @@
     }
     
     50% {
-  transform: rotateY(-120deg) translateZ(60px);
+  transform: translateZ(60px) rotateY(-120deg); 
   box-shadow: -30px 0 40px rgba(0,0,0,0.4)
     
     100% {
