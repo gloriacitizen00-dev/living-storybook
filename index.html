@@ -24,6 +24,16 @@
       position: relative;
       background-color: #fff;
     }
+
+    .portada {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  padding: 20px;
+}
+.portada img {
+  max-width: 80%; /* controla el tamaño para que no se vea demasiado grande */
+  border: 2px solid #000;
+}
     .titulo {
       text-align: center;
       font-family: 'New Amsterdam', serif;
@@ -68,10 +78,10 @@
 </head>
 <body>
 
-  <!-- Página 1 -->
+<!-- Página 1 (Portada centrada) -->
   <div class="pagina">
     <h1 class="titulo">Nacimos para ser héroes</h1>
-    <div class="manga-cuadro">
+    <div class="portada">
       <img src="coming soon.PNG" alt="Portada">
     </div>
     <footer>Gloria Martínez — Página 1</footer>
