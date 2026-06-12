@@ -2,28 +2,77 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>MANGA</title>
+  <title>Nacimos para ser héroes</title>
   <style>
     body {
-      background-color: black;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    h1 {
-      font-size: 4em;
+      background-color: #fff;
+      color: #333;
+      font-family: 'Helvetica', sans-serif;
       margin: 0;
+      padding: 0;
+    }
+    .pagina {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      border-bottom: 2px solid #000;
+      position: relative;
+      background-color: #fff;
+    }
+    .titulo {
+      text-align: center;
+      font-size: 2em;
+      color: gray;
+      margin-top: 50px;
+    }
+    .manga-cuadro {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .manga-cuadro img {
+      width: 45%;
+      border: 2px solid #000;
+    }
+    .texto {
+      padding: 20px;
+      font-size: 1em;
+      color: #000;
+      background-color: #fff;
+      border-top: 1px solid #000;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 20px;
+      padding: 10px;
+      border-top: 1px solid #000;
     }
   </style>
 </head>
 <body>
-  <h1>Próximamente</h1>
+
+  <!-- Página 1 -->
+  <div class="pagina">
+    <h1 class="titulo">Nacimos para ser héroes</h1>
+    <footer>Gloria Martinez — Página 1</footer>
+  </div>
+
+  <!-- Página 2 -->
+  <div class="pagina">
+    <div class="manga-cuadro">
+      <img src="tu_imagen_1.png" alt="Cuadro 1">
+      <img src="tu_imagen_2.png" alt="Cuadro 2">
+    </div>
+    <div class="texto">
+      <p>Aquí puedes escribir el diálogo o narración sin afectar las imágenes.</p>
+    </div>
+    <footer>Gloria Martinez — Página 2</footer>
+  </div>
+
 </body>
 </html>
-
-
-
