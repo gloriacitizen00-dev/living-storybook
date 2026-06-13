@@ -2,15 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Nacimos Para Ser Héroes</title>
 
-<meta property="og:title" content="Nacimos Para Ser Héroes">
-<meta property="og:description" content="Living Book">
-<meta property="og:url" content="https://gloriacitizen00-dev.github.io/living-storybook/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://gloriacitizen00-dev.github.io/living-storybook/coming%20soon.PNG">
+  <!-- Open Graph (Facebook) -->
+  <meta property="og:title" content="Nacimos Para Ser Héroes">
+  <meta property="og:description" content="Living Book">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gloriacitizen00-dev.github.io/living-storybook/">
+  <meta property="og:image" content="https://gloriacitizen00-dev.github.io/living-storybook/coming%20soon.PNG">
+  <meta property="og:image:secure_url" content="https://gloriacitizen00-dev.github.io/living-storybook/coming%20soon.PNG">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Nacimos Para Ser Héroes">
+  <meta property="og:site_name" content="Nacimos Para Ser Héroes">
+  <meta property="og:locale" content="es_ES">
 
-  <!-- Fuentes: New Amsterdam para títulos, Satisfy para footer -->
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nacimos Para Ser Héroes">
+  <meta name="twitter:description" content="Living Book">
+  <meta name="twitter:image" content="https://gloriacitizen00-dev.github.io/living-storybook/coming%20soon.PNG">
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Satisfy&display=swap" rel="stylesheet">
@@ -23,6 +37,7 @@
       margin: 0;
       padding: 0;
     }
+
     .pagina {
       width: 100%;
       max-width: 900px;
@@ -31,15 +46,18 @@
       position: relative;
       background-color: #fff;
     }
+
     .portada {
       display: flex;
       justify-content: center;
       padding: 20px;
     }
+
     .portada img {
       max-width: 80%;
       border: 2px solid #000;
     }
+
     .titulo {
       text-align: center;
       font-family: 'New Amsterdam', serif;
@@ -47,6 +65,7 @@
       color: gray;
       margin-top: 50px;
     }
+
     .titulo-secundario {
       text-align: center;
       font-family: 'New Amsterdam', serif;
@@ -54,31 +73,19 @@
       color: gray;
       margin-top: 30px;
     }
-    .btn-facebook {
-      display: inline-block;
-      background-color: #1877f2;
-      color: #fff;
-      font-size: 1em;
-      font-weight: bold;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      margin: 20px auto;
-    }
-    .btn-facebook:hover {
-      background-color: #145dbf;
-    }
+
     .manga-cuadro {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       padding: 20px;
     }
+
     .manga-cuadro img {
       width: 100%;
       border: 2px solid #000;
     }
+
     .texto {
       padding: 20px;
       font-size: 1em;
@@ -86,6 +93,7 @@
       background-color: #fff;
       border-top: 1px solid #000;
     }
+
     footer {
       text-align: center;
       font-size: 1.2em;
@@ -97,20 +105,25 @@
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Página 1 (Portada centrada) -->
+  <!-- Página 1 -->
   <div class="pagina">
     <h1 class="titulo">SKYCORTEX</h1>
+
     <div class="portada">
       <img src="coming soon.PNG" alt="Portada">
     </div>
+
     <footer>Gloria Martínez — Página 1</footer>
   </div>
 
   <!-- Página 2 -->
   <div class="pagina">
+
     <h2 class="titulo-secundario">SKYCORTEX</h2>
+
     <div class="manga-cuadro">
       <img src="coming soon.PNG" alt="Cuadro 1">
       <img src="coming soon.PNG" alt="Cuadro 2">
@@ -118,22 +131,27 @@
       <img src="coming soon.PNG" alt="Cuadro 4">
     </div>
 
-    <!-- SDK de Facebook -->
+    <!-- Facebook SDK -->
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" 
+    <script async defer crossorigin="anonymous"
       src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v17.0">
     </script>
 
-    <!-- Botón de compartir -->
-    <div class="fb-share-button" 
-         data-href="https://gloriacitizen00-dev.github.io/" 
-         data-layout="button_count">
+    <!-- Share button -->
+    <div style="text-align:center; margin:20px 0;">
+      <div class="fb-share-button"
+           data-href="https://gloriacitizen00-dev.github.io/living-storybook/"
+           data-layout="button_count"
+           data-size="large">
+      </div>
     </div>
 
     <div class="texto">
       <p>La historia continúa entre sombras y destinos...</p>
     </div>
+
     <footer>Gloria Martínez — Página 2</footer>
+
   </div>
 
 </body>
