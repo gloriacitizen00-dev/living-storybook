@@ -2,14 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Nacimos para ser héroes</title>
+  <title>SKYCORTEX</title>
+
+  <!-- Metadatos Open Graph para Facebook -->
+  <meta property="og:title" content="SKYCORTEX">
+  <meta property="og:description" content="Nacimos para ser héroes - Living Book">
+  <meta property="og:image" content="https://gloriacitizen00-dev.github.io/coming%20soon.PNG">
+  <meta property="og:url" content="https://gloriacitizen00-dev.github.io/">
+  <meta property="og:type" content="website">
+
   <!-- Fuentes: New Amsterdam para títulos, Satisfy para footer -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Satisfy&display=swap" rel="stylesheet">
-  <a href="https://www.facebook.com" target="_blank" class="btn-facebook">
-  Ir a Facebook
-</a>
+
   <style>
     body {
       background-color: #fff;
@@ -26,16 +32,15 @@
       position: relative;
       background-color: #fff;
     }
-
     .portada {
-  display: flex;
-  justify-content: center; /* centra horizontalmente */
-  padding: 20px;
-}
-.portada img {
-  max-width: 80%; /* controla el tamaño para que no se vea demasiado grande */
-  border: 2px solid #000;
-}
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .portada img {
+      max-width: 80%;
+      border: 2px solid #000;
+    }
     .titulo {
       text-align: center;
       font-family: 'New Amsterdam', serif;
@@ -51,22 +56,20 @@
       margin-top: 30px;
     }
     .btn-facebook {
-  display: inline-block;
-  background-color: #1877f2; /* azul oficial de Facebook */
-  color: #fff;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  margin: 20px auto;
-}
-
-.btn-facebook:hover {
-  background-color: #145dbf; /* tono más oscuro al pasar el mouse */
-}
-
+      display: inline-block;
+      background-color: #1877f2;
+      color: #fff;
+      font-size: 1em;
+      font-weight: bold;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin: 20px auto;
+    }
+    .btn-facebook:hover {
+      background-color: #145dbf;
+    }
     .manga-cuadro {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -97,9 +100,9 @@
 </head>
 <body>
 
-<!-- Página 1 (Portada centrada) -->
+  <!-- Página 1 (Portada centrada) -->
   <div class="pagina">
-    <h1 class="titulo">Nacimos para ser héroes</h1>
+    <h1 class="titulo">SKYCORTEX</h1>
     <div class="portada">
       <img src="coming soon.PNG" alt="Portada">
     </div>
@@ -108,27 +111,28 @@
 
   <!-- Página 2 -->
   <div class="pagina">
-    <h2 class="titulo-secundario">Nacimos para ser héroes</h2>
+    <h2 class="titulo-secundario">SKYCORTEX</h2>
     <div class="manga-cuadro">
       <img src="coming soon.PNG" alt="Cuadro 1">
       <img src="coming soon.PNG" alt="Cuadro 2">
       <img src="coming soon.PNG" alt="Cuadro 3">
       <img src="coming soon.PNG" alt="Cuadro 4">
     </div>
-    <!-- SDK de Facebook -->
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" 
-  src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v17.0">
-</script>
 
-<!-- Botón de compartir -->
-<div class="fb-share-button" 
-     data-href="TU_URL_DEL_MANGA" 
-     data-layout="button_count">
-</div>
+    <!-- SDK de Facebook -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+      src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v17.0">
+    </script>
+
+    <!-- Botón de compartir -->
+    <div class="fb-share-button" 
+         data-href="https://gloriacitizen00-dev.github.io/" 
+         data-layout="button_count">
+    </div>
 
     <div class="texto">
-      <p>La historia continúa...</p>
+      <p>La historia continúa entre sombras y destinos...</p>
     </div>
     <footer>Gloria Martínez — Página 2</footer>
   </div>
