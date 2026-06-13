@@ -7,7 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Satisfy&display=swap" rel="stylesheet">
-
+  <a href="https://www.facebook.com" target="_blank" class="btn-facebook">
+  Ir a Facebook
+</a>
   <style>
     body {
       background-color: #fff;
@@ -48,6 +50,23 @@
       color: gray;
       margin-top: 30px;
     }
+    .btn-facebook {
+  display: inline-block;
+  background-color: #1877f2; /* azul oficial de Facebook */
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 20px auto;
+}
+
+.btn-facebook:hover {
+  background-color: #145dbf; /* tono más oscuro al pasar el mouse */
+}
+
     .manga-cuadro {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -96,6 +115,18 @@
       <img src="coming soon.PNG" alt="Cuadro 3">
       <img src="coming soon.PNG" alt="Cuadro 4">
     </div>
+    <!-- SDK de Facebook -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+  src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v17.0">
+</script>
+
+<!-- Botón de compartir -->
+<div class="fb-share-button" 
+     data-href="TU_URL_DEL_MANGA" 
+     data-layout="button_count">
+</div>
+
     <div class="texto">
       <p>La historia continúa...</p>
     </div>
