@@ -122,12 +122,14 @@
       text-align: justify;
     }
 
-    .imagen-central img {
-      max-width: 350px;
-      width: 100%;
-      border: 3px solid white;
-      display: block;
-    }
+ .imagen-central img {
+  max-width: 600px; /* antes 350px */
+  width: 100%;
+  border: 3px solid white;
+  display: block;
+  margin: auto; /* asegura que quede centrada */
+}
+
 
     .pagina-intro footer {
       grid-column: 1 / 4;
@@ -157,28 +159,23 @@
   <footer>Gloria Martínez — Página 1</footer>
 </div>
   
-  <!-- Página 2 -->
-  <div class="pagina pagina-intro">
-    <h2 class="titulo-manga">La historia comienza</h2>
+<!-- Página 2 -->
+<div class="pagina pagina-intro">
+  <h2 class="titulo-manga">La historia comienza</h2>
 
-    <div class="lado-izquierdo">
-      <p>
-        Texto de la izquierda. Puede ser una reflexión, una introducción o una narración.
-      </p>
-    </div>
-
-    <div class="imagen-central">
-      <img src="magic1.jpg" alt="Ilustración introductoria en blanco y negro">
-    </div>
-
-    <div class="lado-derecho">
-      <p>
-        Texto de la derecha. Aquí puede continuar la narración o presentar otro punto de vista.
-      </p>
-    </div>
-
-    <footer>Gloria Martínez — Página 2</footer>
+  <div class="lado-izquierdo">
+    <p>
+      Texto de la izquierda. Puede ser una reflexión, una introducción o una narración.
+    </p>
   </div>
+
+  <div class="imagen-central">
+    <img src="magic1.jpg" alt="Ilustración introductoria en blanco y negro">
+  </div>
+
+  <footer>Gloria Martínez — Página 2</footer>
+</div>
+
 
   <!-- Página 3 -->
   <div class="pagina">
