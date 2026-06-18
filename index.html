@@ -104,16 +104,23 @@
       border-top: 1px solid #000;
     }
 
-    .pagina-intro {
-      background-color: #000;
-      color: white;
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: 30px;
-      padding: 40px;
-    }
+.pagina-intro {
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+  display: flex;        /* cambiamos grid por flex */
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+    .pagina-intro .texto {
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 700px;
+}
 
     .lado-izquierdo,
     .lado-derecho {
@@ -122,12 +129,12 @@
       text-align: justify;
     }
 
- .imagen-central img {
-  max-width: 600px; /* antes 350px */
+.imagen-central img {
+  max-width: 600px; /* más grande */
   width: 100%;
   border: 3px solid white;
   display: block;
-  margin: auto; /* asegura que quede centrada */
+  margin: auto; /* centrada */
 }
 
 
@@ -163,19 +170,18 @@
 <div class="pagina pagina-intro">
   <h2 class="titulo-manga">La historia comienza</h2>
 
-  <div class="lado-izquierdo">
-    <p>
-      Texto de la izquierda. Puede ser una reflexión, una introducción o una narración.
-    </p>
-  </div>
-
   <div class="imagen-central">
     <img src="magic1.jpg" alt="Ilustración introductoria en blanco y negro">
   </div>
 
+  <div class="texto">
+    <p>
+      Texto de la introducción. Puede ser una reflexión, una narración o un pensamiento inicial.
+    </p>
+  </div>
+
   <footer>Gloria Martínez — Página 2</footer>
 </div>
-
 
   <!-- Página 3 -->
   <div class="pagina">
