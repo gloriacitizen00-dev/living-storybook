@@ -94,6 +94,43 @@
       border-top: 1px solid #000;
     }
 
+    .pagina-intro {
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 30px;
+
+  padding: 40px;
+}
+
+.lado-izquierdo,
+.lado-derecho {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.imagen-central img {
+  max-width: 350px;
+  width: 100%;
+  border: 3px solid white;
+  display: block;
+}
+
+.lado-izquierdo,
+.lado-derecho{
+  text-align: justify;
+}
+
+.pagina-intro footer {
+  grid-column: 1 / 4;
+  color: #aaa;
+  border-top: 1px solid #444;
+}
+
     footer {
       text-align: center;
       font-size: 1.2em;
@@ -119,6 +156,7 @@
     <footer>Gloria Martínez — Página 1</footer>
   </div>
 
+  <h2 class="titulo-manga">La historia comienza</h2>
   <div class="lado-izquierdo">
     <p>
       Texto de la izquierda.
