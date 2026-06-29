@@ -146,10 +146,9 @@
     
 .manga-cuadro img:nth-child(1),
 .manga-cuadro img:nth-child(2) {
-  max-width: calc(100% + 4cm);
+  width: 115%;        /* ~15% bigger than default */
+  margin: 0 auto;     /* keeps them centered */
 }
-}
-
     .pagina-intro footer {
       grid-column: 1 / 4;
       color: #aaa;
@@ -164,6 +163,7 @@
       margin-top: 20px;
       padding: 10px;
       border-top: 1px solid #000;
+    }
     }
   </style>
 </head>
