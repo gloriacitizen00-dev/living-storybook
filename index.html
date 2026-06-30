@@ -203,15 +203,36 @@
     height: auto;
 }
 
-.manga-dos img{
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border: 5px solid #000;
-    background: #fff;
-    padding: 3px;
-    box-shadow: 8px 8px 0 #000;
+.manga-dos{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+    margin:20px 0 30px;
+    background:black;
+    padding:20px;
 }
+
+.img-arriba{
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    border: 5px solid white;
+    background: white;
+    padding: 4px;
+    box-shadow: 8px 8px 0 rgba(255,255,255,.2);
+}
+
+    .img-abajo{
+    width: 70%;
+    max-width: 420px;
+    height: auto;
+    border: 5px solid white;
+    background: white;
+    padding: 4px;
+    box-shadow: 8px 8px 0 rgba(255,255,255,.2);
+}
+    
     .pagina-intro footer {
       grid-column: 1 / 4;
       color: #aaa;
@@ -344,8 +365,8 @@ Su madre que también practicaba la transmutación del alma desde hacía bastant
   <h2 class="titulo-manga">El Fantasma del Invierno</h2>
 
   <div class="manga-dos">
-      <img src="new/original-manga-costa-rica11.jpg" alt="Manga original para ninos">
-      <img src="new/original-manga-costa-rica12.jpg" alt="Manga original para ninos">
+      <img class="img-arriba" src="new/original-manga-costa-rica11.jpg" alt="Manga original para ninos">
+      <img class="img-abajo" src="new/original-manga-costa-rica12.jpg" alt="Manga original para ninos">
   </div>
 
   <div class="texto">
