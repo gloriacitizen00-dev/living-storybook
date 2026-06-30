@@ -84,21 +84,27 @@
       margin-bottom: 30px;
     }
 
-   .manga-cuadro {
-  display: flex;          /* usa flexbox para que sea más fácil */
-  flex-wrap: wrap;        /* permite que las imágenes bajen a la siguiente fila */
-  gap: 10px;              /* espacio entre imágenes */
-  justify-content: center;
+  /* Jerarquía principal */
+.manga-cuadro {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas */
+  gap: 15px;
+  padding: 20px;
+  justify-items: center;
+  align-items: center;
+  background-color: #fff;
 }
 
+/* Jerarquía secundaria: imágenes dentro del cuadro */
 .manga-cuadro img {
-  border: 2px solid #000; /* borde estilo viñeta */
+  width: 300px;        /* ancho fijo para todas */
+  height: 450px;       /* alto fijo para todas */
+  object-fit: contain; /* mantiene proporción, no recorta */
+  border: 3px solid #000;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+  background-color: #fff; /* fondo blanco detrás de la imagen */
   display: block;
-  margin: 5px;
-  width: auto;            /* tamaño natural */
-  height: auto;           /* tamaño natural */
 }
-
 
     .texto {
       padding: 20px;
