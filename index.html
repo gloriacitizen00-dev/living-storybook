@@ -169,6 +169,13 @@
   background: #fff;
 }
 
+       /* Solo las dos primeras imágenes */
+    .manga-grid img:nth-child(1),
+    .manga-grid img:nth-child(2) {
+      width: 7cm;
+      height: 15cm;
+      object-fit: cover;
+    }
     
     .pagina-intro footer {
       grid-column: 1 / 4;
