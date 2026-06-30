@@ -84,17 +84,21 @@
       margin-bottom: 30px;
     }
 
-    .manga-cuadro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      padding: 20px;
-    }
+   .manga-cuadro {
+  display: flex;          /* usa flexbox para que sea más fácil */
+  flex-wrap: wrap;        /* permite que las imágenes bajen a la siguiente fila */
+  gap: 10px;              /* espacio entre imágenes */
+  justify-content: center;
+}
 
-    .manga-cuadro img {
-      width: 100%;
-      border: 2px solid #000;
-    }
+.manga-cuadro img {
+  border: 2px solid #000; /* borde estilo viñeta */
+  display: block;
+  margin: 5px;
+  width: auto;            /* tamaño natural */
+  height: auto;           /* tamaño natural */
+}
+
 
     .texto {
       padding: 20px;
