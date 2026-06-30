@@ -146,8 +146,11 @@
     
 .manga-cuadro img:nth-child(1),
 .manga-cuadro img:nth-child(2) {
-  width: 115%;        /* ~15% bigger than default */
-  margin: 0 auto;     /* keeps them centered */
+  width: 265px;   /* ≈ 7 cm */
+  height: 567px;  /* ≈ 15 cm */
+  object-fit: cover; /* mantiene proporción y recorta si es necesario */
+  display: block;
+  margin: auto;
 }
 
     .manga-page {
