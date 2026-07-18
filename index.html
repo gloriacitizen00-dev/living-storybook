@@ -85,6 +85,25 @@
       margin-bottom: 30px;
     }
 
+    .manga-header{
+    text-align:left;
+    padding:40px 20px 20px;
+}
+
+.manga-header h1{
+    font-family:'New Amsterdam', serif;
+    font-size:3em;
+    color:#000;
+    margin:0;
+    letter-spacing:3px;
+}
+
+.manga-header p{
+    font-size:1.2em;
+    color:#333;
+    margin-top:10px;
+}
+
   /* Jerarquía principal */
 .manga-cuadro {
   display: grid;
@@ -383,7 +402,13 @@
 <body>
 
 <div class="pagina">
-  <h1 class="titulo">Nacimos Para Ser Héroes</h1>
+  <header class="manga-header">
+
+    <h1>Nacimos Para Ser Héroes</h1>
+
+    <p>Manga Original</p>
+
+</header>
   <div class="portada">
     <img src="mariposa.jpg" alt="Portada del libro" loading="lazy">
   </div>
@@ -395,8 +420,17 @@
          data-size="large">
     </div>
   </div>
+
+  <nav class="manga-menu">
+
+<a href="#">♥ Inicio</a>
+<a href="#">♥ Capítulos</a>
+<a href="#">♥ FAQ</a>
+<a href="#">♥ SkyCortex</a>
+
+</nav>
   
-  <footer>Gloria Martínez — Página 1</footer>
+  <footer>© Gloria Martínez</footer>
 </div>
   
 <!-- Página 2 -->
