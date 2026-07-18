@@ -126,6 +126,169 @@
     letter-spacing: 5px;
 }
 
+  /* ==========================
+   MANGA NAVIGATION
+========================== */
+
+.manga-navigation {
+
+    width:100%;
+
+    background:#000;
+
+    padding:20px 0 35px;
+
+    text-align:center;
+
+}
+
+
+/* ==========================
+   HEART IMAGE
+========================== */
+
+.heart-banner img {
+
+    width:220px;
+
+    max-width:70%;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 25px;
+
+}
+
+
+/* ==========================
+   MENU
+========================== */
+
+.manga-menu {
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.manga-menu-button {
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-family:"Cinzel", serif;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    padding:12px 28px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:6px;
+
+    background:transparent;
+
+    transition:.3s ease;
+
+}
+
+
+/* efecto elegante */
+
+.manga-menu-button:hover {
+
+    color:#d4af37;
+
+    border-color:#d4af37;
+
+    transform:translateY(-3px);
+
+}
+
+
+/* pequeña línea debajo */
+
+.manga-menu-button::after {
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-6px;
+
+    left:50%;
+
+    width:0;
+
+    height:2px;
+
+    background:#d4af37;
+
+    transform:translateX(-50%);
+
+    transition:.3s;
+
+}
+
+
+.manga-menu-button:hover::after {
+
+    width:70%;
+
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:600px){
+
+    .manga-menu {
+
+        gap:15px;
+
+    }
+
+
+    .manga-menu-button {
+
+        font-size:14px;
+
+        padding:10px 18px;
+
+    }
+
+
+    .heart-banner img {
+
+        width:160px;
+
+    }
+
+}
+
   /* Jerarquía principal */
 .manga-cuadro {
   display: grid;
@@ -417,7 +580,7 @@
       padding: 10px;
       border-top: 1px solid #000;
     }
-    }
+    
   </style>
 </head>
 
@@ -443,14 +606,53 @@
     </div>
   </div>
 
-  <nav class="manga-menu">
+ <div class="manga-navigation">
 
-<a href="#">♥ Inicio</a>
-<a href="#">♥ Capítulos</a>
-<a href="#">♥ FAQ</a>
-<a href="#">♥ SkyCortex</a>
+    <!-- IMAGEN DE CORAZONES -->
+    <div class="heart-banner">
+        <img src="images/hearts.png" alt="Nacimos para ser héroes hearts">
+    </div>
 
-</nav>
+
+    <!-- MENU -->
+    <nav class="menu">
+
+        <div class="menu-item">
+
+            <a href="#manga" class="menu-button">
+
+                <span>Read Manga</span>
+
+            </a>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <a href="#characters" class="menu-button">
+
+                <span>Characters</span>
+
+            </a>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <a href="#about" class="menu-button">
+
+                <span>About</span>
+
+            </a>
+
+        </div>
+
+
+    </nav>
+
+</div>
   
   <footer>© Gloria Martínez</footer>
 </div>
