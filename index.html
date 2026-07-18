@@ -85,23 +85,45 @@
       margin-bottom: 30px;
     }
 
-    .manga-header{
-    text-align:left;
-    padding:40px 20px 20px;
+.manga-header {
+    background: #000;
+    padding: 35px 50px;
+    text-align: left;
+    border-bottom: 1px solid #222;
 }
 
-.manga-header h1{
-    font-family:'New Amsterdam', serif;
-    font-size:3em;
-    color:#000;
-    margin:0;
-    letter-spacing:3px;
+.manga-header h1 {
+    margin: 0;
+    font-family: "Pirata One", cursive;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: white;
+
+    /* efecto incrustado */
+    text-shadow:
+        0 2px 0 #333,
+        0 0 8px rgba(255,255,255,0.45),
+        0 0 18px rgba(180,0,0,0.35);
+
+    text-transform: uppercase;
+
+   background: linear-gradient(
+        180deg,
+        #ffffff,
+        #bdbdbd
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.manga-header p{
-    font-size:1.2em;
-    color:#333;
-    margin-top:10px;
+.manga-header p {
+    margin-top: 8px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    color: #ddd;
+    letter-spacing: 5px;
 }
 
   /* Jerarquía principal */
